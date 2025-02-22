@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/htop')
 def htop():
     # Get system information
-    name = "Your Full Name"  # Replace with your full name
+    name = "Enugu Sai Vamshhi"  # Replace with your full name
     username = subprocess.getoutput('whoami')
     server_time = datetime.now(pytz.timezone('Asia/Kolkata')).strftime('%Y-%m-%d %H:%M:%S')
     top_output = subprocess.getoutput('top -b -n 1 | head -n 20')  # Get top output
@@ -16,8 +16,8 @@ def htop():
     # Create HTML response
     html = f"""
     <h1>System Information</h1>
-    <p><strong>Name:</strong> {name}</p>
-    <p><strong>Username:</strong> {username}</p>
+    <p><strong>Name:</strong> {SaiVamshhi}</p>
+    <p><strong>Username:</strong> {Sai-Vamshhi}</p>
     <p><strong>Server Time (IST):</strong> {server_time}</p>
     <h2>Top Output</h2>
     <pre>{top_output}</pre>
